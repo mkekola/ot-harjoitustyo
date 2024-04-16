@@ -2,7 +2,8 @@ import random
 import time
 
 genders = ["Male", "Female"]
-life_stages = ["Infant", "Toddler", "Child", "Teen", "Young Adult", "Adult", "Elder"]
+life_stages = ["Infant", "Toddler", "Child",
+               "Teen", "Young Adult", "Adult", "Elder"]
 voices = ["Sweet", "Melodic", "Lilted", "Clear", "Warm", "Brash"]
 aspirations = ["Animal", "Athletic", "Creativity", "Deviance", "Family", "Food",
                "Fortune", "Knowledge", "Location", "Love", "Nature", "Popularity"]
@@ -13,6 +14,7 @@ hair_colors = ["Black", "Dark Brown", "Light Brown", "Red", "Dark Blonde",
                "Light Blonde", "Dark Grey", "Light Gray", "Blue", "Pink", "Green"]
 eye_colors = ["Blue", "Light Blue", "Brown", "Dark Brown",
               "Light Brown", "Green", "Light Green", "Amber", "Black", "Grey"]
+
 
 def create_random_character():
     character = {
@@ -27,6 +29,7 @@ def create_random_character():
     }
     return character
 
+
 def main():
 
     print("Generating character...")
@@ -36,6 +39,7 @@ def main():
     for attribute, value in random_character.items():
         print()
         print(f"{attribute}: {value}")
+
 
 if __name__ == "__main__":
     main()
