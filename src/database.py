@@ -3,7 +3,7 @@ import sqlite3
 def init_db():
     conn = sqlite3.connect('character_data.db')
     cursor = conn.cursor()
-    cursor.execute('''CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, gender TEXT, 
+    cursor.execute('''CREATE TABLE IF NOT EXISTS characters (id INTEGER PRIMARY KEY, gender TEXT, 
                    life_stage TEXT, voice TEXT, aspiration TEXT, skin_tone TEXT, 
                    hair_style TEXT, hair_color TEXT, eye_color TEXT)''')
     conn.commit()

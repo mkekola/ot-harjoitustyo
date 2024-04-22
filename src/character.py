@@ -17,13 +17,13 @@ eye_colors = ["Blue", "Light Blue", "Brown", "Dark Brown",
 def create_random_character():
     character = {
         "Gender": random.choice(genders),
-        "Life Stage": random.choice(life_stages),
+        "Life_Stage": random.choice(life_stages),
         "Voice": random.choice(voices),
         "Aspiration": random.choice(aspirations),
-        "Skin Tone": random.choice(skin_tones),
-        "Hair Style": random.choice(hair_styles),
-        "Hair Color": random.choice(hair_colors),
-        "Eye Color": random.choice(eye_colors)
+        "Skin_Tone": random.choice(skin_tones),
+        "Hair_Style": random.choice(hair_styles),
+        "Hair_Color": random.choice(hair_colors),
+        "Eye_Color": random.choice(eye_colors)
     }
     return character
 
