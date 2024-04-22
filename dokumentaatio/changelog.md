@@ -12,4 +12,5 @@
 ## Viikko 5
 
 - Eroteltu sovellus- ja käyttöliittymälogiikat
-- luotu database 
+- Luotu database 
+- Luotu käyttäjälle vaihtoehdot tallentaa ja listata tallennetut hahmot
