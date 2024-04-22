@@ -8,3 +8,8 @@
 
 - Lisätty pylint ja task-komento tälle
 - Päivitetty README ajantasalle
+
+## Viikko 5
+
+- Eroteltu sovellus- ja käyttöliittymälogiikat
+- luotu database 
