@@ -10,6 +10,23 @@ def create_character():
 def main():
     init_db() # Initialize the database
 
+    # Ask the user if they want to list created characters
+    listing_option = input("Would you like to list created characters? (yes/no): ")
+    if listing_option.lower() == "yes":
+        characters = get_characters()
+        if characters:
+            print("Characters:")
+            for character in characters:
+                print(character)
+        else:
+            print("No characters found.")
+    
+    # Ask the user if they want to generate a new character
+    generating_option = input("Would you like to generate a new character? (yes/no): ")
+    if generating_option.lower() != "yes":
+        print("Sul Sul!")
+        return
+    
     print("Generating character...")
     time.sleep(2) # Simulate processing time
 
