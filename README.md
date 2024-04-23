@@ -15,6 +15,9 @@ Käyttäjä pystyy myös tallentamaan ja tarkastelemaan luomiansa hahmoja.
 - [Changelog](./dokumentaatio/changelog.md)
 - [Arkkitehtuuri](./dokumentaatio/arkkitehtuuri.md)
 
+## Release
+- [Viikko 5](https://github.com/mkekola/ot-harjoitustyo/releases/tag/viikko5)
+
 ## Asennus
 
 ```bash
