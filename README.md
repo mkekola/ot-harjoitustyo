@@ -3,12 +3,17 @@
 #### *Helsingin yliopisto*
 Aineopintojen harjoitustyö: **ohjelmistotekniikka, kevät 2024**.
 
-Tulen toteuttamaan tällä kurssilla **pelihahmo generaattorin**.
+Tulen toteuttamaan tällä kurssilla **pelihahmogeneraattorin**, jonka ideana on arpoa Sims-hahmolle eri piirteet. Piirteillä käyttäjä voi luoda vaivattomasti hahmon Sims-peliin.
+
+Käyttäjä pystyy arpomaan esimerkiksi hahmon hiustyylin sekä -värin ja elämäntavoitteen.
+
+Käyttäjä pystyy myös tallentamaan ja tarkastelemaan luomiansa hahmoja.
 
 ## Dokumentaatio
-- [Vaatimusmäärittely](https://github.com/mkekola/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
-- [Tuntikirjanpito](https://github.com/mkekola/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
-- [Changelog](https://github.com/mkekola/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+- [Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
+- [Tuntikirjanpito](./dokumentaatio/tuntikirjanpito.md)
+- [Changelog](./dokumentaatio/changelog.md)
+- [Arkkitehtuuri](./dokumentaatio/arkkitehtuuri.md)
 
 ## Asennus
 
