@@ -7,4 +7,5 @@
 | 9.4. | 5    | Sovelluksen alustusta ja tekoa |
 | 9.4. | 0.5    | Lisätty pylint ja päivitetty README |
 | 22.4. | 4   | Jatkettu sovellusta |
-| yht   | 11.5  | | 
+| 23.4. | 4   | Muokattu sovellusta ja lisätty testit |
+| yht   | 15.5  | | 

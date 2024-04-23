@@ -14,3 +14,6 @@
 - Eroteltu sovellus- ja käyttöliittymälogiikat
 - Luotu database 
 - Luotu käyttäjälle vaihtoehdot tallentaa ja listata tallennetut hahmot
+- Lisätty testit hahmon luontiin
+
+

@@ -12,8 +12,8 @@ Sovelluksella on vain normaali käyttäjärooli.
 
 - Kirjautumisikkuna
 - Rekisteröitymisikkuna
-- Hahmon generointi-ikkuna
-- Tallennetut hahmot
+- Hahmon generointi-ikkuna ☑️
+- Tallennetut hahmot ☑️
 
 ## Perusversion tarjoama toiminnallisuus
 
@@ -24,9 +24,9 @@ Sovelluksella on vain normaali käyttäjärooli.
 
 ### Kirjautumisen jälkeen
 
-- Käyttäjä näkee tallentamansa hahmot
-- Käyttäjä voi generoida itselleen uuden hahmon
-- Käyttäjä voi kirjautua ulos
+- Käyttäjä näkee tallentamansa hahmot ☑️
+- Käyttäjä voi generoida itselleen uuden hahmon ☑️
+- Käyttäjä voi kirjautua ulos 
 
 ### Jatkokehitysideoita
 
