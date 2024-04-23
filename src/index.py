@@ -1,5 +1,5 @@
 import time
-from character import create_random_character
+from entities.character import Character
 from database import init_db, save_character, get_characters
 
 def create_character():
@@ -15,7 +15,7 @@ def main():
     if listing_option.lower() == "yes":
         characters = get_characters()
         if characters:
-            print("Characters:")
+            print("Characters:\n")
             for character in characters:
                 print(character)
         else:
@@ -27,15 +27,12 @@ def main():
         print("Sul Sul!")
         return
     
-    print("Generating character...")
+    print("Generating character...\n")
     time.sleep(2) # Simulate processing time
 
     # Generate a random character
-    random_character = create_random_character()
-
-    # Print the generated character
-    for attribute, value in random_character.items():
-        print(f"{attribute}: {value}")
+    random_character = Character()
+    print(random_character)
 
     # Ask the user if they want to save the character
     saving_option = input("Would you like to save this character? (yes/no): ")

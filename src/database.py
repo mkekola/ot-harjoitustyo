@@ -1,4 +1,5 @@
 import sqlite3
+from entities.character import Character
 
 def init_db():
     conn = sqlite3.connect('character_data.db')
@@ -16,7 +17,8 @@ def save_character(character):
                    skin_tone, hair_style, hair_color, eye_color) 
         VALUES (:Gender, :Life_Stage, :Voice, :Aspiration, 
                    :Skin_Tone, :Hair_Style, :Hair_Color, :Eye_Color)
-    ''', character)
+    ''', (character.gender, character.life_stage, character.voice, character.aspiration, 
+    character.skin_tone, character.hair_style, character.hair_color, character.eye_color))
     conn.commit()
     conn.close()
 
@@ -24,6 +26,11 @@ def get_characters():
     conn = sqlite3.connect('character_data.db')
     cursor = conn.cursor()
     cursor.execute('''SELECT * FROM characters''')
-    characters = cursor.fetchall()
+    characters_data = cursor.fetchall()
     conn.close()
+
+    characters = []
+    for data in characters_data:
+        character = Character(*data)
+        characters.append(character)
     return characters
