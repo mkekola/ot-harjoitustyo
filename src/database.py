@@ -3,6 +3,11 @@ from entities.character import Character
 
 
 def init_db():
+    ''' Alustaa tietokannan, jos sitä ei ole olemassa.
+    Args: 
+        connection: Tietokantayhteys.
+    '''
+
     conn = sqlite3.connect('character_data.db')
     cursor = conn.cursor()
     cursor.execute('''CREATE TABLE IF NOT EXISTS characters (id INTEGER PRIMARY KEY, gender TEXT,
@@ -13,6 +18,10 @@ def init_db():
 
 
 def save_character(character):
+    ''' Tallentaa hahmon tietokantaan.
+    Args:
+        character: Hahmo, joka tallennetaan tietokantaan.
+        '''
     conn = sqlite3.connect('character_data.db')
     cursor = conn.cursor()
     cursor.execute('''INSERT INTO characters (gender, life_stage, voice, aspiration,
@@ -26,6 +35,10 @@ def save_character(character):
 
 
 def get_characters():
+    ''' Hakee tietokannasta kaikki hahmot.
+    Returns:
+        Kaikki tietokannassa olevat hahmot.
+        '''
     conn = sqlite3.connect('character_data.db')
     cursor = conn.cursor()
     cursor.execute('''SELECT * FROM characters''')

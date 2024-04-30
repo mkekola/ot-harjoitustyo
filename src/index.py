@@ -4,6 +4,8 @@ from database import init_db, save_character, get_characters
 
 
 def main():
+    ''' Luo ja tallentaa satunnaisen hahmon. '''
+
     init_db()  # Initialize the database
 
     # Ask the user if they want to list created characters

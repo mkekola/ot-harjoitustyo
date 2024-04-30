@@ -16,4 +16,7 @@
 - Luotu käyttäjälle vaihtoehdot tallentaa ja listata tallennetut hahmot
 - Lisätty testit hahmon luontiin
 
+## Viikko 6
+
+- Lisätty docstring-dokumentaatiota
 

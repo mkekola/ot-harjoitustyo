@@ -8,4 +8,6 @@
 | 9.4. | 0.5    | Lisätty pylint ja päivitetty README |
 | 22.4. | 4   | Jatkettu sovellusta |
 | 23.4. | 6   | Muokattu sovellusta ja lisätty testit |
-| yht   | 17.5  | | 
+| 25.4. | 2   | Tkinterin opiskelua |
+| 30.4. | 3.5   | Koodikatselmointi ja docstring|
+| yht   | 23  | | 
