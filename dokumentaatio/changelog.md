@@ -20,3 +20,8 @@
 
 - Lisätty docstring-dokumentaatiota
 
+## Viikko 7
+
+- Lisätty rekisteröitymis- ja kirjautumistoiminnallisuudet
+- Lisätty käyttäjäkohtainen hahmon tallennus
+
