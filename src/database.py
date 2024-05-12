@@ -64,13 +64,17 @@ def save_character(character, user):
         '''
     conn = sqlite3.connect('character_data.db')
     cursor = conn.cursor()
-    cursor.execute('''INSERT INTO characters (gender, life_stage, voice, aspiration,
-                   skin_tone, hair_style, hair_color, eye_color, user_id) 
-        VALUES (:Gender, :Life_Stage, :Voice, :Aspiration,
-                   :Skin_Tone, :Hair_Style, :Hair_Color, :Eye_Color, :User_Id)
-    ''', (character.gender, character.life_stage, character.voice, character.aspiration,
-          character.skin_tone, character.hair_style, character.hair_color, character.eye_color, user))
-    conn.commit()
+    try:
+        cursor.execute('''INSERT INTO characters (gender, life_stage, voice, aspiration,
+                       skin_tone, hair_style, hair_color, eye_color, user_id) 
+            VALUES (:Gender, :Life_Stage, :Voice, :Aspiration,
+                       :Skin_Tone, :Hair_Style, :Hair_Color, :Eye_Color, :User_Id)
+        ''', (character.gender, character.life_stage, character.voice, character.aspiration,
+              character.skin_tone, character.hair_style, character.hair_color, character.eye_color, user))
+        conn.commit()
+        print("Character saved successfully!")
+    except sqlite3.IntegrityError:
+        print("Character not saved.")
     conn.close()
 
 def get_characters(user):

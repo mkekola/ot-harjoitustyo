@@ -61,12 +61,13 @@ def main():
                 save_option = input("Would you like to save this character? (yes/no): ")
                 if save_option.lower() == "yes":
                     save_character(random_character, current_user)
-                    print("Character saved successfully!")
                 else:
                     print("Character not saved.")
             elif action == "3":
                 logged_in = False
                 current_user = None
+            else:
+                print("Invalid action.")
 
 
 if __name__ == "__main__":
