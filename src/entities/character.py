@@ -21,7 +21,7 @@ class Character():
                   "Light Brown", "Green", "Light Green", "Amber", "Black", "Grey"]
 
     def __init__(self, id=None, gender=None, life_stage=None, voice=None, aspiration=None,
-                 skin_tone=None, hair_style=None, hair_color=None, eye_color=None):
+                 skin_tone=None, hair_style=None, hair_color=None, eye_color=None, user_id=None):
         ''' Luokan konstruktori, joka luo uuden hahmon.
             Args:
                 id: Hahmon tunniste.
@@ -33,6 +33,7 @@ class Character():
                 hair_style: Hahmon hiustyyli.
                 hair_color: Hahmon hiusten väri.
                 eye_color: Hahmon silmien väri.
+                user_id: Käyttäjän tunniste.
                 '''
 
         self.gender = gender if gender else random.choice(self.genders)
@@ -49,6 +50,7 @@ class Character():
             self.hair_colors)
         self.eye_color = eye_color if eye_color else random.choice(
             self.eye_colors)
+        self.user_id = user_id
 
     def __str__(self):
         ''' Luokan merkkijonoesitys.
