@@ -19,6 +19,7 @@ Käyttäjä pystyy myös tallentamaan ja tarkastelemaan luomiansa hahmoja.
 ## Release
 - [Viikko 5](https://github.com/mkekola/ot-harjoitustyo/releases/tag/viikko5)
 - [Viikko 6](https://github.com/mkekola/ot-harjoitustyo/releases/tag/viikko6)
+- [Loppupalautus](https://github.com/mkekola/ot-harjoitustyo/releases/tag/loppupalautus)
 
 ## Asennus
 

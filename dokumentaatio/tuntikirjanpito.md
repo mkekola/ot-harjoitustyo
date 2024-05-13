@@ -12,4 +12,5 @@
 | 30.4. | 3.5   | Docstring |
 | 11.5. | 3   | Sovelluksen edistäminen |
 | 12.5. | 8  | Kirjautumistoiminnallisuden luominen |
-| yht   | 34  | | 
+| 13.5. | 9  | Sovelluksen viimeistely |
+| yht   | 43  | | 
