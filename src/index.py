@@ -3,6 +3,10 @@ from entities.character import Character
 from database import init_db, login_user, register_user, save_character, get_characters
 
 def menu_view():
+    ''' Näyttää käyttäjän valikon.
+    Returns:
+        Käyttäjän valinta.
+    '''
     print("\nHooba Noobie! (What's up! in Simlish)\n")
     print("[1] Register")
     print("[2] Login")
@@ -12,12 +16,18 @@ def menu_view():
 
 
 def new_register_user():
+    ''' Rekisteröi uuden käyttäjän.
+    '''
     username = input("\nEnter your username: ")
     password = input("Enter your password: ")
     register_user(username, password)
 
 
 def login_input_view():
+    ''' Kirjaa käyttäjän sisään.
+    Returns:
+        Käyttäjän tunniste, jos kirjautuminen onnistui, muuten None.
+    '''
     username = input("\nEnter your username: ")
     password = input("Enter your password: ")
     user = login_user(username, password)
@@ -25,6 +35,10 @@ def login_input_view():
 
 
 def app_view():
+    ''' Näyttää sovelluksen valikon.
+    Returns:
+        Käyttäjän valinta.
+    '''
     print("\nSul Sul! (Hello! in Simlish)\n")
     print("[1] List created characters")
     print("[2] Generate a new character")
@@ -34,6 +48,10 @@ def app_view():
 
 
 def list_characters(user):
+    ''' Listaa käyttäjän tallentamat hahmot.
+    Args:
+        user: Käyttäjän tunniste.
+    '''
     characters = get_characters(user)
     if characters:
         print("Characters:\n")
@@ -44,6 +62,10 @@ def list_characters(user):
 
 
 def create_character_view(user):
+    ''' Luo uuden hahmon ja tallentaa sen tietokantaan.
+    Args:
+        user: Käyttäjän tunniste.
+    '''
     print("Generating character...\n")
     time.sleep(2)
     random_character = Character()
