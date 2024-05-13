@@ -1,15 +1,15 @@
-# Ohjelmistotekniikka, harjoitustyö
+# TS4-pelihahmogeneraattori
 
-#### *Helsingin yliopisto*
 Aineopintojen harjoitustyö: **ohjelmistotekniikka, kevät 2024**.
 
-Tulen toteuttamaan tällä kurssilla **pelihahmogeneraattorin**, jonka ideana on arpoa Sims-hahmolle eri piirteet. Piirteillä käyttäjä voi luoda vaivattomasti hahmon Sims-peliin.
+Tulen toteuttamaan tällä kurssilla **pelihahmogeneraattorin**, jonka ideana on arpoa Sims-hahmolle eri piirteet. Piirteillä käyttäjä voi luoda vaivattomasti hahmon The Sims 4-peliin.
 
 Käyttäjä pystyy arpomaan esimerkiksi hahmon hiustyylin sekä -värin ja elämäntavoitteen.
 
 Käyttäjä pystyy myös tallentamaan ja tarkastelemaan luomiansa hahmoja.
 
 ## Dokumentaatio
+- [Käyttöohje](./dokumentaatio/kayttoohje.md)
 - [Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
 - [Tuntikirjanpito](./dokumentaatio/tuntikirjanpito.md)
 - [Changelog](./dokumentaatio/changelog.md)
@@ -17,6 +17,7 @@ Käyttäjä pystyy myös tallentamaan ja tarkastelemaan luomiansa hahmoja.
 
 ## Release
 - [Viikko 5](https://github.com/mkekola/ot-harjoitustyo/releases/tag/viikko5)
+- [Viikko 6](https://github.com/mkekola/ot-harjoitustyo/releases/tag/viikko6)
 
 ## Asennus
 
