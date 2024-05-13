@@ -18,16 +18,24 @@ class TestDatabase(unittest.TestCase):
 
     def test_register_user_failure(self):
         register_user("newuser", "password123", self.connection)
-        result = register_user("newuser", "password123", self.connection)  # Try to register the same user again
+        result = register_user("newuser", "password123", self.connection)
         self.assertFalse(result)
 
     def test_login_user_successful(self):
         register_user("newuser", "password123", self.connection)
         result = login_user("newuser", "password123", self.connection)
         self.assertTrue(result)
-    
+
     def test_login_user_failure(self):
         result = login_user("newuser", "password123", self.connection)
         self.assertFalse(result)
 
+    def test_empty_character_list(self):
+        characters = get_characters(1, self.connection)
+        self.assertEqual(characters, [])
 
+    def test_save_character(self):
+        character = Character()
+        save_character(character, 1, self.connection)
+        characters = get_characters(1, self.connection)
+        self.assertEqual(len(characters), 1)

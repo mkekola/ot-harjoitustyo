@@ -14,6 +14,7 @@ Käyttäjä pystyy myös tallentamaan ja tarkastelemaan luomiansa hahmoja.
 - [Tuntikirjanpito](./dokumentaatio/tuntikirjanpito.md)
 - [Changelog](./dokumentaatio/changelog.md)
 - [Arkkitehtuuri](./dokumentaatio/arkkitehtuuri.md)
+- [Testausdokumentti](/dokumentaatio/testausdokumentti.md)
 
 ## Release
 - [Viikko 5](https://github.com/mkekola/ot-harjoitustyo/releases/tag/viikko5)
