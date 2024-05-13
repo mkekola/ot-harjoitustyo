@@ -24,4 +24,7 @@
 
 - Lisätty rekisteröitymis- ja kirjautumistoiminnallisuudet
 - Lisätty käyttäjäkohtainen hahmon tallennus
+- Luotu database-testit
+- Päivitetty käyttöohje
+
 

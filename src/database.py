@@ -2,41 +2,37 @@ import sqlite3
 from entities.character import Character
 
 
-def init_db():
-    ''' Alustaa tietokannan, jos sitä ei ole olemassa.
+def init_db(connection):
+    ''' Initializes the database if it does not exist.
     Args: 
-        connection: Tietokantayhteys.
+        connection: Database connection.
     '''
-
-    conn = sqlite3.connect('character_data.db')
-    cursor = conn.cursor()
+    cursor = connection.cursor()
     cursor.execute('''CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, 
-               username TEXT UNIQUE NOT NULL, password TEXT NOT NULL)''')
+                   username TEXT UNIQUE NOT NULL, password TEXT NOT NULL)''')
     cursor.execute('''CREATE TABLE IF NOT EXISTS characters (id INTEGER PRIMARY KEY, user_id INTEGER, gender TEXT,
                    life_stage TEXT, voice TEXT, aspiration TEXT, skin_tone TEXT,
                    hair_style TEXT, hair_color TEXT, eye_color TEXT, FOREIGN KEY (user_id) REFERENCES users(id))''')
-    conn.commit()
-    conn.close()
+    connection.commit()
 
-def register_user(username, password):
-    ''' Rekisteröi käyttäjän tietokantaan.
+def register_user(username, password, connection):
+    ''' Registers a user in the database.
     Args:
-        username: Käyttäjänimi.
-        password: Salasana.
-        '''
-    conn = sqlite3.connect('character_data.db')
-    cursor = conn.cursor()
+        username: Username.
+        password: Password.
+        connection: Database connection.
+    '''
+    cursor = connection.cursor()
     try:
-        cursor.execute('''INSERT INTO users (username, password) VALUES (:Username, :Password)''',
-                       (username, password))
-        conn.commit()
+        cursor.execute('''INSERT INTO users (username, password) VALUES (?, ?)''', (username, password))
+        connection.commit()
         print("User registered successfully!")
+        return True
     except sqlite3.IntegrityError:
         print("Username already exists.")
         return False
-    conn.close()
-
-def login_user(username, password):
+    
+def login_user(username, password, connection=None):
     ''' Kirjaa käyttäjän sisään.
     Args:
         username: Käyttäjänimi.
@@ -44,7 +40,10 @@ def login_user(username, password):
     Returns:
         True, jos kirjautuminen onnistui, muuten False.
         '''
-    conn = sqlite3.connect('character_data.db')
+    conn = connection
+    if conn is None:
+        conn = sqlite3.connect('character_data.db')
+
     cursor = conn.cursor()
     cursor.execute('''SELECT id FROM users WHERE username = :Username AND password = :Password''',
                    (username, password))
@@ -57,12 +56,15 @@ def login_user(username, password):
         print("Login failed.")
         return None
 
-def save_character(character, user):
+def save_character(character, user, connection=None):
     ''' Tallentaa hahmon tietokantaan.
     Args:
         character: Hahmo, joka tallennetaan tietokantaan.
         '''
-    conn = sqlite3.connect('character_data.db')
+    conn = connection
+    if conn is None:
+        conn = sqlite3.connect('character_data.db')
+
     cursor = conn.cursor()
     try:
         cursor.execute('''INSERT INTO characters (gender, life_stage, voice, aspiration,
@@ -77,12 +79,15 @@ def save_character(character, user):
         print("Character not saved.")
     conn.close()
 
-def get_characters(user):
+def get_characters(user, connection=None):
     ''' Hakee tietokannasta kaikki hahmot.
     Returns:
         Kaikki tietokannassa olevat hahmot.
         '''
-    conn = sqlite3.connect('character_data.db')
+    conn = connection
+    if conn is None:
+        conn = sqlite3.connect('character_data.db')
+
     cursor = conn.cursor()
     cursor.execute('''SELECT * FROM characters WHERE user_id = ?''', (user,))
     characters_data = cursor.fetchall()

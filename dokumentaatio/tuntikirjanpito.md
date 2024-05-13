@@ -9,5 +9,7 @@
 | 22.4. | 4   | Jatkettu sovellusta |
 | 23.4. | 6   | Muokattu sovellusta ja lisätty testit |
 | 25.4. | 2   | Tkinterin opiskelua |
-| 30.4. | 3.5   | Koodikatselmointi ja docstring|
-| yht   | 23  | | 
+| 30.4. | 3.5   | Docstring |
+| 11.5. | 3   | Sovelluksen edistäminen |
+| 12.5. | 8  | Kirjautumistoiminnallisuden luominen |
+| yht   | 34  | | 

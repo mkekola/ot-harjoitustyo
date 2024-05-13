@@ -10,8 +10,8 @@ Sovelluksella on vain normaali käyttäjärooli.
 
 ## Käyttöliittymäluonnos
 
-- Kirjautumisikkuna
-- Rekisteröitymisikkuna
+- Kirjautumisikkuna ☑️
+- Rekisteröitymisikkuna ☑️
 - Hahmon generointi-ikkuna ☑️
 - Tallennetut hahmot ☑️
 
@@ -19,14 +19,14 @@ Sovelluksella on vain normaali käyttäjärooli.
 
 ### Ennen kirjautumista
 
-- Käyttäjä voi rekisteröidä itselleen käyttäjätilin
-- Käyttäjä voi kirjautua
+- Käyttäjä voi rekisteröidä itselleen käyttäjätilin ☑️
+- Käyttäjä voi kirjautua ☑️
 
 ### Kirjautumisen jälkeen
 
 - Käyttäjä näkee tallentamansa hahmot ☑️
 - Käyttäjä voi generoida itselleen uuden hahmon ☑️
-- Käyttäjä voi kirjautua ulos 
+- Käyttäjä voi kirjautua ulos ☑️
 
 ### Jatkokehitysideoita
 

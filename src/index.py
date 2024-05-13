@@ -30,14 +30,14 @@ def main():
                     logged_in = True
 
             elif action == "3":
-                print("\nDag Dag!")
+                print("\nDag Dag! (Goodbye! in Simlish)\n")
                 break
 
             else:
                 print("Invalid action.")
 
         else:
-            print("\nSul Sul!")
+            print("\nSul Sul! (Hello! in Simlish)\n")
             print("[1] List created characters")
             print("[2] Generate a new character")
             print("[3] Logout\n")
